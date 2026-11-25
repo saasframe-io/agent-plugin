@@ -57,31 +57,31 @@
           "positive": [
             {
               "description": "Find screens by what they say",
-              "prompt": "Show me pricing pages with a monthly and yearly toggle.",
+              "prompt": "Use SaaSFrame: show me pricing pages with a monthly and yearly toggle.",
               "tools_triggered": "search_screens",
               "expected_behavior": "Returns a grid of real SaaS pricing pages, each with its SaaS name and a link to its SaaSFrame page."
             },
             {
               "description": "Open one reference with its measured styles",
-              "prompt": "Open the Linear pricing page from SaaSFrame and tell me which fonts, sizes and colors it uses.",
+              "prompt": "Use SaaSFrame: open the Linear pricing page and tell me which fonts, sizes and colors it uses.",
               "tools_triggered": "search_screens, get_screen",
               "expected_behavior": "Finds the screen, returns its screenshot and lists the typefaces, text sizes, colors and radii measured on the page."
             },
             {
               "description": "Study a user flow step by step",
-              "prompt": "How do SaaS products onboard a new user? Show me one flow step by step.",
+              "prompt": "Use SaaSFrame: how do SaaS products onboard a new user? Show me one flow step by step.",
               "tools_triggered": "search_flows",
               "expected_behavior": "Returns one or more onboarding flows as ordered screens, with a link for each step."
             },
             {
               "description": "Get the method for a screen type",
-              "prompt": "I'm designing a settings page. What should I decide first?",
+              "prompt": "Use SaaSFrame: I'm designing a settings page. What should I decide first?",
               "tools_triggered": "design_guide",
               "expected_behavior": "Returns the guide for settings pages: what to decide first, what to do and avoid, benchmarks measured on real pages and searches to run next."
             },
             {
               "description": "Read a public website by section",
-              "prompt": "List the sections of https://linear.app and give me its hero as Tailwind code.",
+              "prompt": "Use SaaSFrame: list the sections of https://linear.app and give me its hero as Tailwind code.",
               "tools_triggered": "inspect_url, export_section",
               "expected_behavior": "Lists the page sections in order, then returns the hero section as Tailwind code written with the tokens measured on the page."
             }
@@ -102,7 +102,8 @@
           ]
         },
         "commerce": false,
-        "commerce_description": "This plugin does not sell products or process payments. A SaaSFrame Pro or Team subscription, bought on saasframe.io, is required to use the tools."
+        "commerce_description": "This plugin does not sell products or process payments. A SaaSFrame Pro or Team subscription, bought on saasframe.io, is required to use the tools.",
+        "demo_recording_url": "https://github.com/saasframe-io/agent-plugin/raw/main/review/saasframe-chatgpt-demo.mp4"
       },
       "publication": {
         "release_notes": "Initial release: search real SaaS screens, sections and flows, read measured styles, inspect and export public website sections, save pages to collections."
