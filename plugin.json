@@ -1,0 +1,112 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "saasframe",
+  "version": "1.0.0",
+  "description": "Design from real SaaS references: search 2,000+ real pages, product screens and user flows, with the styles measured on each page.",
+  "author": {
+    "name": "SaaSFrame",
+    "email": "hello@saasframe.io",
+    "url": "https://www.saasframe.io"
+  },
+  "homepage": "https://www.saasframe.io/agents/mcp",
+  "repository": "https://github.com/saasframe-io/agent-plugin",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "ui",
+    "ux",
+    "saas",
+    "references",
+    "inspiration",
+    "landing page",
+    "design system",
+    "figma",
+    "tailwind"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "SaaSFrame",
+        "shortDescription": "Real SaaS design references",
+        "longDescription": "SaaSFrame is a curated library of real SaaS interfaces: website pages, product screens, user flows and isolated sections such as heroes and pricing tables. Connect it and your AI looks at how real products solved a screen before it designs yours.\n\nAsk for a pricing page, an onboarding flow or a settings screen. SaaSFrame returns matching references with their screenshot, a description of the design, and the fonts, sizes, colors and radii measured on the live page. A design guide gives the method for each screen type, with benchmarks computed from real pages.\n\nYou can also read any public website section by section, export a section as code, Figma layers, a Framer component or a Webflow paste, and save pages to your SaaSFrame collections.\n\nReferences are a starting point: rebuild with your own system, content and brand. Requires a SaaSFrame Pro or Team plan.",
+        "developerName": "SaaSFrame",
+        "category": "Design",
+        "capabilities": [
+          "Search real SaaS screens and flows",
+          "Read measured design styles",
+          "Inspect a public website",
+          "Export a section as code",
+          "Save pages to your collections"
+        ],
+        "websiteURL": "https://www.saasframe.io/agents/mcp",
+        "supportURL": "https://www.saasframe.io/contact",
+        "privacyPolicyURL": "https://www.saasframe.io/privacy",
+        "termsOfServiceURL": "https://www.saasframe.io/terms",
+        "defaultPrompt": [
+          "Show me pricing pages with a monthly and yearly toggle.",
+          "How do SaaS products onboard a new user?",
+          "I'm designing a settings page. What should I decide first?"
+        ],
+        "brandColor": "#2B2D31",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      },
+      "onboardingSkill": "./skills/design-from-references/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Find screens by what they say",
+              "prompt": "Show me pricing pages with a monthly and yearly toggle.",
+              "tools_triggered": "search_screens",
+              "expected_behavior": "Returns a grid of real SaaS pricing pages, each with its SaaS name and a link to its SaaSFrame page."
+            },
+            {
+              "description": "Open one reference with its measured styles",
+              "prompt": "Open the Linear pricing page from SaaSFrame and tell me which fonts, sizes and colors it uses.",
+              "tools_triggered": "search_screens, get_screen",
+              "expected_behavior": "Finds the screen, returns its screenshot and lists the typefaces, text sizes, colors and radii measured on the page."
+            },
+            {
+              "description": "Study a user flow step by step",
+              "prompt": "How do SaaS products onboard a new user? Show me one flow step by step.",
+              "tools_triggered": "search_flows",
+              "expected_behavior": "Returns one or more onboarding flows as ordered screens, with a link for each step."
+            },
+            {
+              "description": "Get the method for a screen type",
+              "prompt": "I'm designing a settings page. What should I decide first?",
+              "tools_triggered": "design_guide",
+              "expected_behavior": "Returns the guide for settings pages: what to decide first, what to do and avoid, benchmarks measured on real pages and searches to run next."
+            },
+            {
+              "description": "Read a public website by section",
+              "prompt": "List the sections of https://linear.app and give me its hero as Tailwind code.",
+              "tools_triggered": "inspect_url, export_section",
+              "expected_behavior": "Lists the page sections in order, then returns the hero section as Tailwind code written with the tokens measured on the page."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Bulk extraction of the library is not supported: daily limits apply and the terms forbid building datasets. The assistant should explain this and offer to search for specific references instead.",
+              "prompt": "Download every screen in the SaaSFrame library as a dataset."
+            },
+            {
+              "description": "No tool deletes data. The assistant should say it cannot delete a collection and point the user to their SaaSFrame account.",
+              "prompt": "Delete my Fintech collection on SaaSFrame."
+            },
+            {
+              "description": "References are a starting point, not content to ship. The assistant should not reproduce another company's brand, logo and text for the user's site, and should offer a version with the user's own brand and content.",
+              "prompt": "Copy Stripe's homepage exactly, with its logo and text, for my own site."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "This plugin does not sell products or process payments. A SaaSFrame Pro or Team subscription, bought on saasframe.io, is required to use the tools."
+      },
+      "publication": {
+        "release_notes": "Initial release: search real SaaS screens, sections and flows, read measured styles, inspect and export public website sections, save pages to collections."
+      }
+    }
+  }
+}

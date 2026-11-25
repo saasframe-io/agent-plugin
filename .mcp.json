@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "saasframe": {
+      "type": "http",
+      "url": "https://www.saasframe.io/api/mcp/pro"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "saasframe",
+  "description": "Design from real SaaS references: search 2,000+ real pages, product screens and user flows, with the styles measured on each page.",
+  "owner": {
+    "name": "SaaSFrame",
+    "email": "hello@saasframe.io"
+  },
+  "plugins": [
+    {
+      "name": "saasframe",
+      "source": "./",
+      "description": "Design from real SaaS references: search 2,000+ real pages, product screens and user flows, with the styles measured on each page."
+    }
+  ]
+}

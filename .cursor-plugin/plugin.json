@@ -1,0 +1,26 @@
+{
+  "name": "saasframe",
+  "description": "Design from real SaaS references in Cursor: search 2,000+ real pages, product screens and user flows, read the styles measured on each page, and inspect any public website section by section.",
+  "version": "1.0.0",
+  "logo": "assets/logo.png",
+  "homepage": "https://www.saasframe.io/agents/mcp",
+  "author": {
+    "name": "SaaSFrame",
+    "email": "hello@saasframe.io",
+    "url": "https://www.saasframe.io"
+  },
+  "repository": "https://github.com/saasframe-io/agent-plugin",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "ui",
+    "ux",
+    "saas",
+    "references",
+    "inspiration",
+    "landing page",
+    "design system",
+    "figma",
+    "tailwind"
+  ]
+}

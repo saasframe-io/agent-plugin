@@ -1,0 +1,12 @@
+{
+  "name": "saasframe",
+  "version": "1.0.0",
+  "description": "Design from real SaaS references: search 2,000+ real pages, product screens and user flows, with the styles measured on each page.",
+  "author": {
+    "name": "SaaSFrame",
+    "email": "hello@saasframe.io"
+  },
+  "homepage": "https://www.saasframe.io/agents/mcp",
+  "repository": "https://github.com/saasframe-io/agent-plugin",
+  "license": "MIT"
+}
