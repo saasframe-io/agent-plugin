@@ -28,9 +28,9 @@
       "interface": {
         "displayName": "SaaSFrame",
         "shortDescription": "Real SaaS design references",
-        "longDescription": "SaaSFrame is a curated library of real SaaS interfaces: website pages, product screens, user flows and isolated sections such as heroes and pricing tables. Connect it and your AI looks at how real products solved a screen before it designs yours.\n\nAsk for a pricing page, an onboarding flow or a settings screen. SaaSFrame returns matching references with their screenshot, a description of the design, and the fonts, sizes, colors and radii measured on the live page. A design guide gives the method for each screen type, with benchmarks computed from real pages.\n\nYou can also read any public website section by section, export a section as code, Figma layers, a Framer component or a Webflow paste, and save pages to your SaaSFrame collections.\n\nReferences are a starting point: rebuild with your own system, content and brand. Requires a SaaSFrame Pro or Team plan.",
+        "longDescription": "SaaSFrame is a curated library of real SaaS interfaces: website pages, product screens, user flows and isolated sections such as heroes and pricing tables. Connect it and your AI looks at how real products solved a screen before it designs yours.\n\nAsk for a pricing page, an onboarding flow or a settings screen. SaaSFrame returns matching references with their screenshot, a description of the design, and the fonts, sizes, colors and radii measured on the live page. A design guide gives the method for each screen type, with benchmarks computed from real pages.\n\nYou can also read any public website section by section, export a section as code, Figma layers, a Framer component or a Webflow paste, and save pages to your SaaSFrame collections.\n\nReferences are a starting point: rebuild with your own system, content and brand.",
         "developerName": "SaaSFrame",
-        "category": "Design",
+        "category": "Developer Tools",
         "capabilities": [
           "Search real SaaS screens and flows",
           "Read measured design styles",
